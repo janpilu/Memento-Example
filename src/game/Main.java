@@ -1,5 +1,8 @@
-package sample;
+package game;
 
+import editor.Caretaker;
+import editor.Controller;
+import editor.Handler;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,7 +11,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    Handler handler;
+    editor.Handler handler;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

@@ -1,22 +1,21 @@
-package sample;
+package game;
 
-import javafx.event.EventHandler;
-import javafx.scene.input.KeyEvent;
+import editor.Memento;
 
 import java.util.ArrayList;
 
 public class Caretaker {
 
-    private ArrayList<Memento> states;
+    private ArrayList<editor.Memento> states;
     private int currentState;
 
     public Caretaker(){
         this.states=new ArrayList<>();
-        this.states.add(new Memento(""));
+        this.states.add(new editor.Memento(""));
         this.currentState = 1;
     }
 
-    public void save(Memento m){
+    public void save(editor.Memento m){
         states.add(m);
         currentState=states.size()-1;
     }
