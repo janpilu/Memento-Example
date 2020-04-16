@@ -1,8 +1,5 @@
 package game;
 
-import editor.Caretaker;
-import editor.Controller;
-import editor.Handler;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,17 +8,12 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    editor.Handler handler;
-
     @Override
     public void start(Stage primaryStage) throws Exception{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sample.fxml"));
         Parent root = fxmlLoader.load();
-        Controller c = fxmlLoader.getController();
-        this.handler = new Handler(c,new Caretaker());
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Short Game");
         Scene scene = new Scene(root, 500, 275);
-        scene.setOnKeyReleased(handler);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

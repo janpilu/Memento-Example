@@ -5,10 +5,16 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.text.Text?>
-<GridPane fx:controller="editor.Controller"
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.ComboBox?>
+<GridPane fx:controller="game.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
     <Text fx:id="info" text="Choose Your Path!" GridPane.rowIndex="0" GridPane.columnSpan="2"></Text>
-    <Button fx:id="op1" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.columnIndex="0" text="Forest"/>
-    <Button fx:id="op2" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.columnIndex="1" text="Cave"/>
-    <Button fx:id="save" GridPane.rowIndex="3" GridPane.columnIndex="0" text="Save!"/>
+    <Button fx:id="op1" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.columnIndex="0" text="Forest" onAction="#op1"/>
+    <Button fx:id="op2" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.columnIndex="1" text="Cave" onAction="#op2"/>
+    <Button fx:id="save" GridPane.rowIndex="3" GridPane.columnIndex="0" text="Save!" onAction="#save"/>
+
+    <ComboBox fx:id="states" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2" promptText="Select Savestate" onAction="#refresh"> </ComboBox>
+    <Button fx:id="load" text="load" onAction="#reload" GridPane.rowIndex="5" GridPane.columnIndex="2" GridPane.columnSpan="2"></Button>
 </GridPane>

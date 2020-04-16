@@ -16,7 +16,7 @@ public class Main extends Application {
         Parent root = fxmlLoader.load();
         Controller c = fxmlLoader.getController();
         this.handler = new Handler(c,new Caretaker());
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Editor");
         Scene scene = new Scene(root, 500, 275);
         scene.setOnKeyReleased(handler);
         primaryStage.setScene(scene);

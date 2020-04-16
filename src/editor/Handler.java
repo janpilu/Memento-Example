@@ -21,7 +21,7 @@ public class Handler implements EventHandler<KeyEvent> {
                 //if(event.isControlDown())
                     caretaker.save(controller.save());
                 break;
-            case L:
+            case R:
                 if(event.isControlDown()){
                     controller.restore(caretaker.getState(true));
                 }

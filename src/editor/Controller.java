@@ -1,5 +1,6 @@
 package editor;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
@@ -18,6 +19,4 @@ public class Controller {
         textarea.setText(m.getState());
         System.out.println("State restored!");
     }
-
-
 }
