@@ -1,28 +1,28 @@
 package game;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Controller {
+
+public class Controller implements Initializable {
 
     @FXML
     private Button levelup;
 
-    private int lvl;
+    private Model m;
 
-
-
-    public Memento save(){
-        System.out.printf("Memento saved!");
-        return new Memento(lvl);
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        m = new Model();
     }
 
-    public void restore(Memento m) {
-        System.out.println("State restored!");
-        lvl = m.getState();
-    }
+    public void refresh(){
 
+    }
 
 }

@@ -19,13 +19,9 @@ public class Handler implements EventHandler<KeyEvent> {
     public void handle(KeyEvent event) {
         System.out.println("typed");
         switch (event.getCode()){
-            case SPACE:
-                //if(event.isControlDown())
-                    caretaker.save(controller.save());
-                break;
-            case L:
+            case S:
                 if(event.isControlDown()){
-                    controller.restore(caretaker.getState(true));
+                    controller.save();
                 }
                 break;
             case B:

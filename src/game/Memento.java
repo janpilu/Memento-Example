@@ -2,13 +2,13 @@ package game;
 
 public class Memento {
 
-    private int state;
+    private Level state;
 
-    public Memento(int state) {
+    public Memento(Level state) {
         this.state = state;
     }
 
-    public int getState(){
+    public Level getState(){
         return state;
     }
 }
